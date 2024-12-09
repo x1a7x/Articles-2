@@ -1,0 +1,44 @@
+
+export DATABASE_URL="postgres://chess1:Af84aammZxrdafcgexzvufghtelr@localhost/chessdb"
+cargo run
+
+
+
+sudo apt update
+sudo apt install postgresql postgresql-contrib -y
+sudo systemctl start postgresql
+sudo systemctl enable postgresql
+
+
+
+Switch to the default Postgres user and create a database and a user:
+
+sudo -i -u postgres
+psql
+
+
+CREATE DATABASE chessdb;
+CREATE USER chess1 WITH ENCRYPTED PASSWORD 'Af84aammZxrdafcgexzvufghtelr';
+GRANT ALL PRIVILEGES ON DATABASE chessdb TO chess1;
+\q
+///////////////////////////////////////////
+
+
+sudo -i -u postgres
+psql
+
+ALTER DATABASE chessdb OWNER TO chess1;
+GRANT ALL PRIVILEGES ON DATABASE chessdb TO chess1;
+\c chessdb
+GRANT CREATE ON SCHEMA public TO chess1;
+GRANT USAGE ON SCHEMA public TO chess1;
+
+
+psql with \q, then exit the postgres user with exit.
+
+
+
+
+
+
+

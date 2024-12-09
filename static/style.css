@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: #333;
+    text-align: center;
+}
+
+.center-link {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.post-form-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    max-width: 400px;
+    text-align: center;
+}
+
+.post-form-box form input[type="text"],
+.post-form-box form textarea,
+.post-form-box form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.post-form-box form input[type="file"] {
+    margin-bottom: 15px;
+}
+
+.post-form-box form input[type="submit"] {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.post-form-box form input[type="submit"]:hover {
+    background: #555;
+}
+
+.article, .comment {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.article h2, .article h1 {
+    margin-top: 0;
+}
+
+.article-media {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+.delete-link, .edit-link {
+    position: absolute;
+    bottom: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: red;
+}
+
+.delete-link {
+    left: 10px;
+}
+
+.edit-link {
+    left: 40px;
+    color: green;
+}
+
+.delete-link:hover {
+    color: darkred;
+}
+
+.edit-link:hover {
+    color: darkgreen;
+}
+
+.comment p {
+    margin: 0;
+}

@@ -1,0 +1,272 @@
+/* General Styles */
+html, body {
+    font-size: 12pt;
+    background: #EEF2FF;
+    color: #000000;
+    margin: 0;
+    padding: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-wrap: break-word; /* Prevent long words from overflowing */
+    word-wrap: break-word;
+    text-align: center; /* Center text by default */
+}
+
+a {
+    background: inherit;
+    color: #34345C;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a:visited {
+    background: inherit;
+    color: #34345C;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a:hover {
+    color: #DD0000;
+    background: inherit;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+hr {
+    color: #34345C;
+    background-image: linear-gradient(to right, rgba(238,242,255,1), rgba(52,52,92,0.75), rgba(238,242,255,1));
+    border: none;
+    height: 1px;
+}
+
+.adminbar {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.logo {
+    clear: both;
+    text-align: center;
+    font-size: 24pt;
+    color: #AF0A0F;
+    width: 100%;
+}
+
+.postarea {
+    background: inherit;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.postform {
+    width: 400px; /* Set the form width to be narrower */
+    margin: 0 auto; /* Center the form */
+    padding: 15px;
+    border: 1px solid #34345C; /* Add a border to distinguish the form */
+    border-radius: 5px;
+    background-color: #f0f8ff; /* Light blue background to set it apart */
+}
+
+.postform input[type="text"],
+.postform textarea,
+.postform input[type="file"] { /* Styling for file input */
+    width: 100%; /* Full width */
+    padding: 10px; /* Increased padding for better touch targets */
+    margin-bottom: 15px; /* Increased margin for better spacing */
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 1em; /* Increased font size for readability */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.postform input[type="submit"] {
+    padding: 10px 20px;
+    background: #34345C;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1em; /* Increased font size for better touch targets */
+}
+
+.postform input[type="submit"]:hover {
+    background: #DD0000;
+}
+
+input[type="text"]#subject {
+    max-width: 350px; /* Limit the maximum width */
+}
+
+.replymode {
+    background-color: #0010E0;
+    color: #FFFFFF;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center; /* Center align the reply mode text */
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.replymode a {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+.replymode a:hover {
+    color: #DD0000;
+}
+
+.pagination {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.pagination a, .pagination span {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 2px;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    color: #34345C;
+}
+
+.pagination .current {
+    background: #34345C;
+    color: #fff;
+    border-color: #34345C;
+}
+
+.pagination .disabled {
+    color: #999;
+    border-color: #ccc;
+}
+
+/* Post Container Styling */
+.post {
+    background-color: #D6DAF0; /* Grey box color */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    max-width: 600px; /* Limit the width for better readability */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; /* Center content within the post */
+}
+
+.post-image {
+    margin-bottom: 10px; /* Space between image and content */
+}
+
+.post-image img {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 100%; /* Make image responsive */
+    height: auto;
+    object-fit: cover;
+}
+
+.post-content {
+    /* No additional styling needed since text is centered */
+}
+
+.post-header {
+    margin-bottom: 10px;
+}
+
+.post-header .title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #34345C;
+}
+
+.reply-link {
+    font-size: 1em;
+    color: #34345C;
+    text-decoration: underline;
+    margin-left: 10px;
+}
+
+.reply-link:hover {
+    color: #DD0000;
+}
+
+.message {
+    white-space: pre-wrap; /* Preserve line breaks */
+    color: #000000;
+}
+
+/* Styles for toggle-image */
+.toggle-image {
+    width: 200px; /* Default width */
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease, width 0.3s ease;
+}
+
+.toggle-image.expanded {
+    transform: scale(2); /* Enlarge the image */
+    width: auto; /* Let the image take its natural size */
+    z-index: 1000; /* Ensure it appears above other elements */
+    position: relative; /* Positioning to allow z-index to take effect */
+}
+
+/* Optional: Prevent layout shifts when image is expanded */
+.post-media {
+    position: relative;
+}
+
+/* Additional styling for better visuals */
+.post-media img {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+.post-media img:hover {
+    border-color: #999;
+}
+
+/* Footer Styling */
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #34345C;
+}
+
+/* Navigation Styles */
+.navigation-board, .navigation-reply {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.navigation-board .hr-green {
+    border: none;
+    height: 2px;
+    background-color: #28a745; /* Green color for main board navigation */
+    margin-bottom: 10px;
+}
+
+.navigation-reply hr {
+    color: #34345C;
+    background-image: linear-gradient(to right, rgba(238,242,255,1), rgba(52,52,92,0.75), rgba(238,242,255,1));
+    border: none;
+    height: 1px;
+}
+
+.navigation-board a, .navigation-reply a {
+    text-decoration: none;
+    color: #007BFF; /* Bootstrap primary color or choose a color that matches your theme */
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.navigation-board a:hover, .navigation-reply a:hover {
+    text-decoration: underline;
+    color: #0056b3; /* Darker shade on hover for better visibility */
+}
+
+/* Optional: Styling for navigation icons if using Font Awesome */
+.navigation-board a i, .navigation-reply a i {
+    margin-right: 8px;
+    color: #007BFF; /* Match the link color */
+}
+
